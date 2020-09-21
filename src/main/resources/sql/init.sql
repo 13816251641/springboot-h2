@@ -1,0 +1,2 @@
+drop table IF EXISTS t_vendor;
+create table t_vendor( id bigint(20) not null comment '主键由IdGenerator生成' primary key,  vendor_code varchar(30) not null comment '界面录入2位大写字母，不能重复',  name_zh varchar(100) not null comment '供应商名称（中）',  name_en varchar(200) not null comment '供应商名称（英）',  short_name varchar(50) not null comment '供应商简称',  is_active tinyint null comment '数据是否已被逻辑删除,0是已删除，1是未删除',  create_time datetime null comment '创建时间',  create_user_code varchar(50) null comment '创建人',  modify_time datetime null comment '修改时间',  modify_user_code varchar(50) null comment '修改人');
