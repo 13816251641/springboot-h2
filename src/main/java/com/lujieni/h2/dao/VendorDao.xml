@@ -4,6 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lujieni.h2.dao.VendorDao">
 
+    <!--使用xml的方式当db中的字段和实体类的不一致的话一定要配置映射-->
     <resultMap id="myResultMap" type="com.lujieni.h2.domain.Vendor" >
         <id column="id" property="id" jdbcType="VARCHAR" />
         <result column="vendor_code" property="vendorCode" jdbcType="VARCHAR" />
@@ -16,7 +17,6 @@
         <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
         <result column="modify_user_code" property="modifyUserCode" jdbcType="VARCHAR" />
     </resultMap>
-
 
     <select id="searchByVendorCode" resultMap="myResultMap">
         SELECT * from t_vendor where vendor_code = #{vendor}

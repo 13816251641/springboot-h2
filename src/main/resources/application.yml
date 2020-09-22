@@ -2,14 +2,14 @@ spring:
   datasource:
     # 驱动
     driver-class-name: org.h2.Driver
-    # h2 内存数据库 内存模式连接配置 库名: mybatis  jdbc:h2:mem:mybatis
+    # h2 内存数据库 内存模式连接配置 库名: h2db  jdbc:h2:mem:h2db
     url: jdbc:h2:mem:h2db;DB_CLOSE_DELAY=-1
     # 初始化数据表 DDL
     schema: classpath:sql/init.sql
     # 初始化数据 DML
     # data: classpath:sql/data.sql
   h2:
-    # 开启console 访问 默认false
+    # 开启console,可以通过浏览器访问 访问 默认false
     console:
       enabled: true
       settings:

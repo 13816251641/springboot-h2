@@ -74,6 +74,7 @@
         </plugins>
 
         <resources>
+            <!--不加会导致xml打包不出来-->
             <resource>
                 <directory>${project.basedir}/src/main/java</directory>
                 <includes>
